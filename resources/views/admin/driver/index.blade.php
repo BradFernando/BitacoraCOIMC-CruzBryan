@@ -44,7 +44,8 @@
                                 <th class="text-center">TELÉFONO</th>
                                 <th class="text-center">TIPO SANGRE</th>
                                 <th class="text-center">TIPO LICENCIA</th>
-                                <th class="text-center" colspan="2">ACCIONES</th>
+                                <th class="text-center">EDITAR</th>
+                                <th class="text-center">ELIMINAR</th>
 
                             </tr>
                         </thead>
@@ -132,14 +133,14 @@
 
                         <div class="form-group col-6">
                             <label for="identification_card">Identificación:</label>
-                            <input type="text" name="identification_card" class="form-control"
-                            minlength="10" maxlength="10" required>
+                            <input type="text" name="identification_card" class="form-control" minlength="10"
+                                maxlength="10" required>
                         </div>
 
                         <div class="form-group col-6">
                             <label for="phone">Teléfono:</label>
-                            <input type="text" name="phone" class="form-control"
-                            minlength="10" maxlength="10" required>
+                            <input type="text" name="phone" class="form-control" minlength="10" maxlength="10"
+                                required>
                         </div>
 
                         @if ($roleUser == 'Admin')
@@ -197,9 +198,6 @@
             </div>
         </div>
     </div>
-
-
-
 
 @stop
 

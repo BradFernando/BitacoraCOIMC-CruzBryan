@@ -5,6 +5,15 @@ use Illuminate\Http\Request;
 
 define('LARAVEL_START', microtime(true));
 
+// Establecer permisos
+$storagePath = __DIR__.'/../storage';
+$cachePath = __DIR__.'/../bootstrap/cache';
+
+if (is_dir($storagePath) && is_dir($cachePath)) {
+    exec('chown -R www-data:www-data '.$storagePath.' '.$cachePath);
+    exec('chmod -R 777 '.$storagePath.' '.$cachePath);
+}
+
 /*
 |--------------------------------------------------------------------------
 | Check If The Application Is Under Maintenance
